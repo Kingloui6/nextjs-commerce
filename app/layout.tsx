@@ -1,6 +1,7 @@
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
 import { WelcomeToast } from "components/welcome-toast";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
 import { getCart } from "lib/shopify";
@@ -42,6 +43,7 @@ export default async function RootLayout({
             <WelcomeToast />
           </main>
         </CartProvider>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
